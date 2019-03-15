@@ -75,7 +75,7 @@ var CALENDAR = function () {
 
         calendar = createCal(calWrap, year, month);
 
-		var calFrame = calWrap.querySelector(".cal-frameJS");
+		var calFrame = calWrap.querySelector(".cal-frameJS"),
 
 		calObj = calFrame.querySelector(".curr");
 
