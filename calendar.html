@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Datepicker</title>
+
+    <link href="css/calendarCustom.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<!-- This calendar is responsive and will expand to the width of its container. Right now, it's in a col-xs-12 which means it is full screen (inside the Bootstrap 'container' div) so your window is your container and it will expand and contract as you resize the window. It can shrink down to 290 px so it will work in earlier, smaller cell phones.-->
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+                <div id="cal" class="calendar-mobilelive" aria-labelledby="dropdownMenu1">
+                    <div class="header">
+                        <span class="left button prevJS"></span>
+                        <span class="month-year labelJS"></span>
+                        <span class="right button nextJS"></span>
+                    </div>
+
+                    <!-- This demonstrates knowledge of show/hide capabilities as requested -->
+                    <table class="daysJS en">
+                        <tr>
+                            <td>SU</td>
+                            <td>MO</td>
+                            <td>TU</td>
+                            <td>WE</td>
+                            <td>TH</td>
+                            <td>FR</td>
+                            <td>SA</td>
+                        </tr>
+                    </table>
+                    <table class="daysJS fr">
+                        <tr>
+                            <td>DI</td>
+                            <td>LU</td>
+                            <td>MA</td>
+                            <td>ME</td>
+                            <td>JE</td>
+                            <td>VE</td>
+                            <td>SA</td>
+                        </tr>
+                    </table>
+                    <div class="cal-frameJS">
+                        <table class="curr">
+                            <!-- calendarCustom.js creates the calendar dynamically
+                    so you don't have to create the html yourself :)
+                    -->
+                        </table>
+                        <div class="clearfix">&nbsp;</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="js/calendarCustom.js"></script>
+<script>
+    var cal = CALENDAR();
+    cal.init("#cal");
+</script>
+</body>
+</html>
