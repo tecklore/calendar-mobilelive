@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e94f5647-8dc4-48e1-93f6-648a85a076ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/calendarCustom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/calendarCustom.js" afterDir="false" />
-    </list>
+    <list default="true" id="e94f5647-8dc4-48e1-93f6-648a85a076ed" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -28,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/calendarCustom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="166">
+              <caret line="79" column="14" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -87,6 +84,11 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>calObj</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,23 +167,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552679156390</updated>
-      <workItem from="1552679157926" duration="3717000" />
+      <workItem from="1552679157926" duration="4465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3717000" />
+    <option name="totallyTimeSpent" value="4465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="278" y="62" width="1109" height="993" extended-state="0" />
-    <editor active="true" />
+    <frame x="73" y="62" width="1852" height="993" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24929972" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14718853" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32906976" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32906976" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -242,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/calendarCustom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="166">
+          <caret line="79" column="14" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
