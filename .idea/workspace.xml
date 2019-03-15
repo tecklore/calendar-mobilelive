@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e94f5647-8dc4-48e1-93f6-648a85a076ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/respond.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/calendarCustom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/calendarCustom.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,13 +22,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="340">
+              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="85">
+                <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="309" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/respond.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="4" column="4204" selection-start-line="4" selection-start-column="4204" selection-end-line="4" selection-end-column="4204" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/html5shiv.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="3" column="2639" selection-start-line="3" selection-start-column="2639" selection-end-line="3" selection-end-column="2639" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/calendarCustom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -36,20 +72,30 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/calendar.html" />
         <option value="$PROJECT_DIR$/css/calendarCustom.css" />
+        <option value="$PROJECT_DIR$/js/html5shiv.min.js" />
+        <option value="$PROJECT_DIR$/js/respond.min.js" />
+        <option value="$PROJECT_DIR$/calendar.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="101" />
-    <option name="y" value="57" />
+    <option name="x" value="241" />
+    <option name="y" value="233" />
     <option name="width" value="1109" />
     <option name="height" value="993" />
   </component>
@@ -70,6 +116,11 @@
               <item name="calendar-mobilelive" type="b2602c69:ProjectViewProjectNode" />
               <item name="calendar-mobilelive" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calendar-mobilelive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calendar-mobilelive" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -104,15 +155,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552679156390</updated>
-      <workItem from="1552679157926" duration="750000" />
+      <workItem from="1552679157926" duration="1780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="750000" />
+    <option name="totallyTimeSpent" value="1780000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="57" width="1109" height="993" extended-state="0" />
+    <frame x="241" y="233" width="1109" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -138,17 +189,44 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/calendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/calendarCustom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/html5shiv.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="3" column="2639" selection-start-line="3" selection-start-column="2639" selection-end-line="3" selection-end-column="2639" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/respond.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="4" column="4204" selection-start-line="4" selection-start-column="4204" selection-end-line="4" selection-end-column="4204" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="309" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
