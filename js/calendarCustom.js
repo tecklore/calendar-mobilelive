@@ -253,7 +253,10 @@ function cloneObj(obj) {
     return copy;
 }
 
-// This is a sneaky way of creating a html element, adding content to it and then returning just the content (without the container) to be inserted into an existing html element.
+// This is a sneaky way of creating a html element, adding content to it and then returning just the content
+// (without the container) - to be inserted into an existing html element.
+// It gets around the dom process of rejecting text input as valid html (and instead displaying the content as text on the screen).
+// It accepts text as html when it is inserted as the content of a valid, existing element's innerHTMLElement's first-child because the first-child itself is a valid html element.
 function htmlToElement(html) {
     var template = document.createElement('template');
     template.innerHTML = html;

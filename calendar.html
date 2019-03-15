@@ -23,10 +23,10 @@
 <!-- This calendar is responsive and will expand to the width of its container. Right now, it's in a col-xs-12 which means it is full screen (inside the Bootstrap 'container' div) so your window is your container and it will expand and contract as you resize the window. It can shrink down to 290 px so it will work in earlier, smaller cell phones.-->
 <body>
 <div class="container">
-    <h1>Calendar by MobileLive</h1>
+    <h1 id="calendar-mobilelive-title">Calendar by MobileLive</h1>
     <div class="row">
         <div class="col-xs-12">
-                <div id="cal" class="calendar-mobilelive">
+                <div id="cal" class="calendar-mobilelive" aria-labelledby="calendar-mobilelive-title">
                     <div class="header">
                         <span class="left button prevJS"></span>
                         <span class="month-year labelJS"></span>
