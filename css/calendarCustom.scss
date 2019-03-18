@@ -1,3 +1,7 @@
+$color-primary: #e87352;
+$color-secondary: #90432e;
+$color-tertiary: #30902e;
+
 html[lang="en"] .daysJS.fr {
   display: none;
 }
@@ -14,7 +18,7 @@ html[lang="fr"] .daysJS.en {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #e87352;
+  background-color: $color-primary;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #ccc;
@@ -44,6 +48,7 @@ html[lang="fr"] .daysJS.en {
         background: -webkit-gradient(linear, left top, left bottom, from(#d94215), to(#bb330f));
       }
       &.left, &.right {
+        top: 20px;
         width: 26px;
         height: 26px;
         background-repeat: no-repeat;
@@ -52,7 +57,6 @@ html[lang="fr"] .daysJS.en {
       &.left {
         background-image: url("../images/cal-arrow-left.png");
         left: 5%;
-        top: 20px;
         &:hover {
           background-image: url("../images/cal-arrow-left-hover.png");
         }
@@ -60,7 +64,6 @@ html[lang="fr"] .daysJS.en {
       &.right {
         background-image: url("../images/cal-arrow-right.png");
         right: 5%;
-        top: 20px;
         &:hover {
           background-image: url("../images/cal-arrow-right-hover.png");
         }
@@ -97,7 +100,7 @@ html[lang="fr"] .daysJS.en {
       -moz-border-radius: 50%;
       border-radius: 50%;
       &:hover {
-        color: #90432e;
+        color: $color-secondary;
         background-color: #FFF;
       }
     }
@@ -133,21 +136,15 @@ html[lang="fr"] .daysJS.en {
         }
       }
     }
-
-    & td
-    & span {
-      font-size: 80%;
-      position: relative;
-    }
   }
   & .dateFrame {
     &.active {
       background-color: #8ffc8f;
-      color: #30902e;
+      color: $color-tertiary;
     }
     &.today, &.today.active {
       background-color: #FFF;
-      color: #90432e;
+      color: $color-secondary;
     }
   }
 }
