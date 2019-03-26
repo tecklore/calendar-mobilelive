@@ -1,12 +1,13 @@
 $color-primary: #e87352;
 $color-secondary: #90432e;
 $color-tertiary: #30902e;
+$cal-border-color: rgba(0, 0, 0, .15);
 
-html[lang="en"] .daysJS.fr {
+html[lang="en"] .calendar-mobilelive__days--fr {
   display: none;
 }
 
-html[lang="fr"] .daysJS.en {
+html[lang="fr"] .calendar-mobilelive__days--en{
   display: none;
 }
 
@@ -21,8 +22,7 @@ html[lang="fr"] .daysJS.en {
   background-color: $color-primary;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .15);
+  border: 1px solid $cal-border-color;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -31,7 +31,7 @@ html[lang="fr"] .daysJS.en {
   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 
 
-  & .header {
+  &__header {
     cursor: default;
     position: relative;
     color: #fff;
@@ -45,25 +45,22 @@ html[lang="fr"] .daysJS.en {
       width: 24px;
       text-align: center;
       position: absolute;
-      &:hover {
-        background: -moz-linear-gradient(top, #d94215, #bb330f);
-        background: -webkit-gradient(linear, left top, left bottom, from(#d94215), to(#bb330f));
-      }
-      &.left, &.right {
+
+      &.js-prev, &.js-next {
         top: 20px;
         width: 26px;
         height: 26px;
         background-repeat: no-repeat;
         background-position: center;
       }
-      &.left {
+      &.js-prev {
         background-image: url("../images/cal-arrow-left.png");
         left: 5%;
         &:hover {
           background-image: url("../images/cal-arrow-left-hover.png");
         }
       }
-      &.right {
+      &.js-next {
         background-image: url("../images/cal-arrow-right.png");
         right: 5%;
         &:hover {
@@ -71,7 +68,7 @@ html[lang="fr"] .daysJS.en {
         }
       }
     }
-    & .month-year {
+    & .month-year-label {
       letter-spacing: 1px;
       width: 100%;
       text-align: center;
@@ -107,13 +104,13 @@ html[lang="fr"] .daysJS.en {
       }
     }
   }
-  & .daysJS td {
+  &__days--en td, & __days--fr td {
     height: 26px;
     line-height: 26px;
     font-size: 90%;
     color: #FFF;
   }
-  & .cal-frameJS {
+  &__frame {
     & td {
       &.today {
         background: #999;
@@ -139,7 +136,8 @@ html[lang="fr"] .daysJS.en {
       }
     }
   }
-  & .dateFrame {
+  &__date--frame {
+    cursor: pointer;
     &.active {
       background-color: #8ffc8f;
       color: $color-tertiary;
@@ -151,10 +149,16 @@ html[lang="fr"] .daysJS.en {
   }
 }
 @media (min-width: 992px) {
-  .calendar-mobilelive .header .left.button {
-    left: 6%;
-  }
-  .calendar-mobilelive .header .right.button {
-    right: 6%;
+  .calendar-mobilelive {
+    &__header {
+      & .button {
+        &.js-prev {
+          left: 6%;
+        }
+        &.js-next {
+          right: 6%;
+        }
+      }
+    }
   }
 }

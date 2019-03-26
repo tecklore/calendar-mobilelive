@@ -11,24 +11,24 @@ var CALENDAR = function () {
     //this sets the en/fr Month names. The day names are hardcoded into the html. French or English shows depending on the lang="" attribute. This demonstrates a knowledge of how to show/hide elements based on variable values.
 
     var months;
-	if ( document.getElementsByTagName('html')[0].getAttribute('lang') == "en" ) {
-		months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-	} else if ( document.getElementsByTagName('html')[0].getAttribute('lang') == "fr" ) {
-		months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-	}
+    if ( document.getElementsByTagName('html')[0].getAttribute('lang') == "en" ) {
+        months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    } else if ( document.getElementsByTagName('html')[0].getAttribute('lang') == "fr" ) {
+        months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    }
 
 // The init function sets the heading label (the month and year) and sets up the prev/next buttons with eventListeners that will switch the month displayed. 'newWrap' is the id of the calendar (in this case #cal)
     function init(newWrap) {
         var calWrap = document.querySelector(newWrap),
-        calLabel = calWrap.querySelector(".labelJS");
+            calLabel = calWrap.querySelector(".month-year-label");
         calLabel.innerHTML = (new Date().getMonth() + " " + new Date().getFullYear());
 
-        calWrap.querySelector(".prevJS").addEventListener( 'click', function(){
-			switchMonth(calWrap, false);
-		}  );
-		calWrap.querySelector(".nextJS").addEventListener( 'click', function(){
-			switchMonth(calWrap, true);
-		}  );
+        calWrap.querySelector(".js-prev").addEventListener( 'click', function(){
+            switchMonth(calWrap, false);
+        }  );
+        calWrap.querySelector(".js-next").addEventListener( 'click', function(){
+            switchMonth(calWrap, true);
+        }  );
 
         calLabel.addEventListener( 'click', switchMonth(calWrap, null, new Date().getMonth(), new Date().getFullYear()) );
         calLabel.click();
@@ -38,11 +38,11 @@ var CALENDAR = function () {
 
 // This function changes the month displayed. 'cal' is the calendar ID (in this case #cal)
     function switchMonth(cal, next, month, year) {
-		var calWrap = cal,
-			wrapLabel = calWrap.querySelector(".labelJS"),
-        	curr = wrapLabel.innerHTML.trim().split(" "), calendar, tempYear = parseInt(curr[1], 10);
+        var calWrap = cal,
+            wrapLabel = calWrap.querySelector(".month-year-label"),
+            curr = wrapLabel.innerHTML.trim().split(" "), calendar, tempYear = parseInt(curr[1], 10);
 
-		// if the month is December and you want to move forward to a future date, this detects if the month you are moving from is December and (as there are no more months after December) it sets the next month to January. It does the reverse if you are on January and want to go to December of the previous year.
+        // if the month is December and you want to move forward to a future date, this detects if the month you are moving from is December and (as there are no more months after December) it sets the next month to January. It does the reverse if you are on January and want to go to December of the previous year.
 
         month = month || ((next) ? ( (curr[0] === "December" || curr[0] === "Décembre") ? 0 : months.indexOf(curr[0]) + 1) : ( ( curr[0] === "January" || curr[0] === "Janvier"  ) ? 11 : months.indexOf(curr[0]) - 1));
         year = year || ((next && month === 0) ? tempYear + 1 : (!next && month === 11) ? tempYear - 1 : tempYear);
@@ -75,30 +75,30 @@ var CALENDAR = function () {
 
         calendar = createCal(calWrap, year, month);
 
-		var calFrame = calWrap.querySelector(".cal-frameJS"),
+        var calFrame = calWrap.querySelector(".calendar-mobilelive__frame"),
 
-		calObj = calFrame.querySelector(".curr");
+            calObj = calFrame.querySelector(".curr");
 
-		calObj.classList.remove("curr");
-		calObj.classList.add("temp");
+        calObj.classList.remove("curr");
+        calObj.classList.add("temp");
 
-		var calTableTxt = calendar.calendar(),
-			calTableNode = htmlToElement(calTableTxt);
+        var calTableTxt = calendar.calendar(),
+            calTableNode = htmlToElement(calTableTxt);
 
-		calFrame.insertBefore( calTableNode, calFrame.firstChild );
-		calFrame.querySelector(".temp").style.display = "none";
+        calFrame.insertBefore( calTableNode, calFrame.firstChild );
+        calFrame.querySelector(".temp").style.display = "none";
 
         wrapLabel.innerHTML = calendar.label;
         clickDay(calWrap);
     }
 
-	// This code creates the calendar by detecting the startDay
+    // This code creates the calendar by detecting the startDay
     function createCal(cal, year, month) {
         var day = 1, i, j, haveDays = true,
-			calWrap = cal,
-	        startDay = new Date(year, month, day).getDay(),
-	        daysInMonths = [31, (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-	        calendar = [];
+            calWrap = cal,
+            startDay = new Date(year, month, day).getDay(),
+            daysInMonths = [31, (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+            calendar = [];
 
         // if the calendar month has already been created before (because you want to that month) and you go back to that month, the code will load the cached version of that month so you don't have to recreate the layout. If this is the first time you have visited this month, it creates the layout and caches it for future use.
         if (createCal.cache[year]) {
@@ -115,11 +115,11 @@ var CALENDAR = function () {
             for (j = 0; j < 7; j++) {
                 if (i === 0) {
                     if (j === startDay) {
-                        calendar[i][j] = "<div class='dateFrame'>" + day++ + "</div>";
+                        calendar[i][j] = "<div class='calendar-mobilelive__date--frame'>" + day++ + "</div>";
                         startDay++;
                     }
                 } else if (day <= daysInMonths[month]) {
-                    calendar[i][j] = "<div class='dateFrame'>" + day++ + "</div>";
+                    calendar[i][j] = "<div class='calendar-mobilelive__date--frame'>" + day++ + "</div>";
                 } else {
                     calendar[i][j] = "";
                     haveDays = false;
@@ -138,14 +138,14 @@ var CALENDAR = function () {
         calendar = "<table class='curr'>" + calendar.join("") + "</table>";
 
         if (month === new Date().getMonth()) {
-			var tdArr = calWrap.querySelector(".cal-frameJS").querySelectorAll("td");
+            var tdArr = calWrap.querySelector(".calendar-mobilelive__frame").querySelectorAll("td");
 
-			for (var i = 0; i < tdArr.length; i++) {
+            for (var i = 0; i < tdArr.length; i++) {
 
-				if ( tdArr[i].innerHTML == new Date().getDate().toString() ) {
-					tdArr[i].classList.add("today");
-				}
-			}
+                if ( tdArr[i].innerHTML == new Date().getDate().toString() ) {
+                    tdArr[i].classList.add("today");
+                }
+            }
         }
         createCal.cache[year][month] = { calendar: function () { return cloneObj(calendar) }, label: months[month] + " " + year };
 
@@ -164,78 +164,78 @@ var CALENDAR = function () {
 
 
 function clickDay(cal) {
-	var wrap = cal, months,
-    	tdArr = wrap.querySelector(".cal-frameJS").querySelectorAll("div.dateFrame"),
+    var wrap = cal, months,
+        tdArr = wrap.querySelector(".calendar-mobilelive__frame").querySelectorAll(".calendar-mobilelive__date--frame"),
 
-		label = wrap.querySelector(".labelJS"),
-		curr = label.innerHTML.trim().split(" "),
-		calMonth = curr[0];
+        label = wrap.querySelector(".month-year-label"),
+        curr = label.innerHTML.trim().split(" "),
+        calMonth = curr[0];
 
-		switch (calMonth) {
+    switch (calMonth) {
 
-                case "January":  case "Janvier":
-                    calMonthNum = 0;
-                    break;
-                case "February": case "Février":
-                    calMonthNum = 1;
-                    break;
-                case "March": case "Mars":
-                    calMonthNum = 2;
-                    break;
-                case "April": case "Avril":
-                    calMonthNum = 3;
-                    break;
-                case "May": case "Mai":
-                    calMonthNum = 4;
-                    break;
-                case "June": case "Juin":
-                    calMonthNum = 5;
-                    break;
-				case "July": case "Juillet":
-                    calMonthNum = 6;
-                    break;
-				case "August": case "Août":
-                    calMonthNum = 7;
-                    break;
-				case "September": case "Septembre":
-                    calMonthNum = 8;
-                    break;
-				case "October": case "Octobre":
-                    calMonthNum = 9;
-                    break;
-				case "November": case "Novembre":
-                    calMonthNum = 10;
-                    break;
-				case "December": case "Décembre":
-                    calMonthNum = 11;
-                    break;
+        case "January":  case "Janvier":
+            calMonthNum = 0;
+            break;
+        case "February": case "Février":
+            calMonthNum = 1;
+            break;
+        case "March": case "Mars":
+            calMonthNum = 2;
+            break;
+        case "April": case "Avril":
+            calMonthNum = 3;
+            break;
+        case "May": case "Mai":
+            calMonthNum = 4;
+            break;
+        case "June": case "Juin":
+            calMonthNum = 5;
+            break;
+        case "July": case "Juillet":
+            calMonthNum = 6;
+            break;
+        case "August": case "Août":
+            calMonthNum = 7;
+            break;
+        case "September": case "Septembre":
+            calMonthNum = 8;
+            break;
+        case "October": case "Octobre":
+            calMonthNum = 9;
+            break;
+        case "November": case "Novembre":
+            calMonthNum = 10;
+            break;
+        case "December": case "Décembre":
+            calMonthNum = 11;
+            break;
 
-            }
+    }
 
 // This adds the class 'today' to the date element which matches the current date.day. That class highlights the day.
-		if (calMonthNum  === new Date().getMonth()) {
+    if (calMonthNum  === new Date().getMonth()) {
 
-			for (var i = 0; i < tdArr.length; i++) {
-				if ( tdArr[i].innerHTML == new Date().getDate().toString() ) {
-					tdArr[i].classList.add("today");
-				}
-			}
+        for (var i = 0; i < tdArr.length; i++) {
+            if ( tdArr[i].innerHTML == new Date().getDate().toString() ) {
+                tdArr[i].classList.add("today");
+            }
         }
+    }
 
 
 // This adds the classes nil and disabled to dates before and after the current month's dates.
-	var tdArr2 = wrap.querySelectorAll("td");
-	for (var i = 0; i < tdArr2.length; i++) {
-		if ( elementIsEmpty(tdArr2[i]) ) {
-           tdArr2[i].classList.add("nil", "disabled");
-       }
-	}
+    var tdArr2 = wrap.querySelectorAll("td");
+    for (var i = 0; i < tdArr2.length; i++) {
+        if ( elementIsEmpty(tdArr2[i]) ) {
+            tdArr2[i].classList.add("nil", "disabled");
+        }
+    }
 }
 
 
 <!-- this a useful vanilla javascript utility for determining if an element has a particular class. It replaces the jQuery hasClass() function. -->
 function hasThisClass(element, cls) {
-	return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
 // This detects if a day element is empty

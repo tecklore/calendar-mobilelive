@@ -1,181 +1,149 @@
-﻿html[lang="en"] .daysJS.fr {
-    display: none;
+html[lang=en] .calendar-mobilelive__days--fr {
+  display: none;
 }
 
-html[lang="fr"] .daysJS.en {
-    display: none;
+html[lang=fr] .calendar-mobilelive__days--en {
+  display: none;
 }
 
 .calendar-mobilelive {
-    -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-    font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif;
-    display: table;
+  font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif;
+  display: table;
+  min-width: 160px;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #e87352;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
-
-.calendar-mobilelive .header {
-    cursor: default;
-    position: relative;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
+.calendar-mobilelive__header {
+  cursor: default;
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-
-.calendar-mobilelive .header span {
-    display: inline-block;
-    line-height: 60px;
+.calendar-mobilelive__header span {
+  display: inline-block;
+  line-height: 60px;
 }
-
-.calendar-mobilelive .header .button {
-    width: 24px;
-    text-align: center;
-    position: absolute;
+.calendar-mobilelive__header .button {
+  width: 24px;
+  text-align: center;
+  position: absolute;
 }
-
-.calendar-mobilelive .header .left.button, .calendar-mobilelive .header .right.button {
-    width: 26px;
-    height: 26px;
-    background-repeat: no-repeat;
-    background-position: center;
+.calendar-mobilelive__header .button.js-prev, .calendar-mobilelive__header .button.js-next {
+  top: 20px;
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.calendar-mobilelive .header .left.button {
-    background-image: url("../images/cal-arrow-left.png");
-    left: 5%;
-    top: 20px;
+.calendar-mobilelive__header .button.js-prev {
+  background-image: url("../images/cal-arrow-left.png");
+  left: 5%;
 }
-.calendar-mobilelive .header .left.button:hover {
-    background-image: url("../images/cal-arrow-left-hover.png");
+.calendar-mobilelive__header .button.js-prev:hover {
+  background-image: url("../images/cal-arrow-left-hover.png");
 }
-
-.calendar-mobilelive .header .right.button {
-    background-image: url("../images/cal-arrow-right.png");
-    right: 5%;
-    top: 20px;
+.calendar-mobilelive__header .button.js-next {
+  background-image: url("../images/cal-arrow-right.png");
+  right: 5%;
 }
-@media (min-width: 992px) {
-    .calendar-mobilelive .header .left.button {
-        left: 6%;
-    }
-    .calendar-mobilelive .header .right.button {
-        right: 6%;
-    }
+.calendar-mobilelive__header .button.js-next:hover {
+  background-image: url("../images/cal-arrow-right-hover.png");
 }
-.calendar-mobilelive .header .right.button:hover {
-    background-image: url("../images/cal-arrow-right-hover.png");
+.calendar-mobilelive__header .month-year-label {
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
 }
-
-.calendar-mobilelive .header .button:hover {
-    background: -moz-linear-gradient(top, #d94215, #bb330f);
-    background: -webkit-gradient(linear, left top, left bottom, from(#d94215), to(#bb330f));
-}
-
-.calendar-mobilelive .header .month-year {
-    letter-spacing: 1px;
-    width: 100%;
-    text-align: center;
-}
-
 .calendar-mobilelive table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
-
+.calendar-mobilelive table.curr {
+  float: left;
+}
+.calendar-mobilelive table .temp {
+  position: absolute;
+}
 .calendar-mobilelive td {
-    color: #FFF;
-    width: 38px;
-    height: 38px;
-    line-height: 38px;
-    text-align: center;
-    cursor: default;
+  color: #FFF;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  cursor: default;
 }
-
 .calendar-mobilelive td > div {
-    width: 38px;
-    height: 38px;
-    margin:auto;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  margin: auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
-
 .calendar-mobilelive td > div:hover {
-    color: #90432e;
-    background-color: #FFF;
+  color: #90432e;
+  background-color: #FFF;
+}
+.calendar-mobilelive__days--en td, .calendar-mobilelive __days--fr td {
+  height: 26px;
+  line-height: 26px;
+  font-size: 90%;
+  color: #FFF;
+}
+.calendar-mobilelive__frame td.today {
+  background: #999;
+  color: #fff;
+}
+.calendar-mobilelive__frame td:not(.nil).active {
+  color: #fff;
+  background: #00549A;
+}
+.calendar-mobilelive__frame td:not(.nil).disabled {
+  color: #ccc;
+  background: #fff;
+}
+.calendar-mobilelive__frame td span {
+  font-size: 80%;
+  position: relative;
+}
+.calendar-mobilelive__frame td span:first-child {
+  bottom: 5px;
+}
+.calendar-mobilelive__frame td span:last-child {
+  top: 5px;
+}
+.calendar-mobilelive__date--frame {
+  cursor: pointer;
+}
+.calendar-mobilelive__date--frame.active {
+  background-color: #8ffc8f;
+  color: #30902e;
+}
+.calendar-mobilelive__date--frame.today, .calendar-mobilelive__date--frame.today.active {
+  background-color: #FFF;
+  color: #90432e;
 }
 
-.calendar-mobilelive .daysJS td {
-    height: 26px;
-    line-height: 26px;
-    font-size: 90%;
-    color: #FFF;
+@media (min-width: 992px) {
+  .calendar-mobilelive__header .button.js-prev {
+    left: 6%;
+  }
+  .calendar-mobilelive__header .button.js-next {
+    right: 6%;
+  }
 }
 
-.calendar-mobilelive .cal-frameJS td.today {
-    background: #999;
-    color: #fff;
-}
-
-/*.calendar-mobilelive .cal-frameJS td:not(.nil):hover {
-    color:#111; 
-    background:#E1E1E1; 
-    -moz-box-shadow:0px 0px 0px; 
-    -webkit-box-shadow:0px 0px 0px; 
-}*/
-.calendar-mobilelive .cal-frameJS td:not(.nil).active {
-    color: #fff;
-    background: #00549A;
-}
-
-.calendar-mobilelive .cal-frameJS td:not(.nil).disabled {
-    color: #ccc;
-    background: #fff;
-}
-
-.calendar-mobilelive .cal-frameJS td span {
-    font-size: 80%;
-    position: relative;
-}
-
-.calendar-mobilelive .cal-frameJS td span:first-child {
-    bottom: 5px;
-}
-
-.calendar-mobilelive .cal-frameJS td span:last-child {
-    top: 5px;
-}
-
-.calendar-mobilelive .cal-frameJS table.curr {
-    float: left;
-}
-
-.calendar-mobilelive .cal-frameJS table.temp {
-    position: absolute;
-}
-
-.calendar-mobilelive .dateFrame.active {
-    background-color: #8ffc8f;
-    color: #30902e;
-}
-
-.calendar-mobilelive .dateFrame.today, .calendar-mobilelive .dateFrame.today.active {
-    background-color: #FFF;
-    color: #90432e;
-}
-
-.calendar-mobilelive {
-    min-width: 160px;
-    width: 100%;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #e87352;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-}
-
+/*# sourceMappingURL=calendarCustom.css.map */
