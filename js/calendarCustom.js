@@ -20,13 +20,13 @@ var CALENDAR = function () {
 // The init function sets the heading label (the month and year) and sets up the prev/next buttons with eventListeners that will switch the month displayed. 'newWrap' is the id of the calendar (in this case #cal)
     function init(newWrap) {
         var calWrap = document.querySelector(newWrap),
-            calLabel = calWrap.querySelector(".month-year-label");
+            calLabel = calWrap.querySelector(".-label");
         calLabel.innerHTML = (new Date().getMonth() + " " + new Date().getFullYear());
 
-        calWrap.querySelector(".js-prev").addEventListener( 'click', function(){
+        calWrap.querySelector(".-prev").addEventListener( 'click', function(){
             switchMonth(calWrap, false);
         }  );
-        calWrap.querySelector(".js-next").addEventListener( 'click', function(){
+        calWrap.querySelector(".-next").addEventListener( 'click', function(){
             switchMonth(calWrap, true);
         }  );
 
@@ -39,7 +39,7 @@ var CALENDAR = function () {
 // This function changes the month displayed. 'cal' is the calendar ID (in this case #cal)
     function switchMonth(cal, next, month, year) {
         var calWrap = cal,
-            wrapLabel = calWrap.querySelector(".month-year-label"),
+            wrapLabel = calWrap.querySelector(".-label"),
             curr = wrapLabel.innerHTML.trim().split(" "), calendar, tempYear = parseInt(curr[1], 10);
 
         // if the month is December and you want to move forward to a future date, this detects if the month you are moving from is December and (as there are no more months after December) it sets the next month to January. It does the reverse if you are on January and want to go to December of the previous year.
@@ -75,7 +75,7 @@ var CALENDAR = function () {
 
         calendar = createCal(calWrap, year, month);
 
-        var calFrame = calWrap.querySelector(".calendar-mobilelive__frame"),
+        var calFrame = calWrap.querySelector(".ml-calendar__frame"),
 
             calObj = calFrame.querySelector(".curr");
 
@@ -115,11 +115,11 @@ var CALENDAR = function () {
             for (j = 0; j < 7; j++) {
                 if (i === 0) {
                     if (j === startDay) {
-                        calendar[i][j] = "<div class='calendar-mobilelive__date--frame'>" + day++ + "</div>";
+                        calendar[i][j] = "<div class='ml-calendar__date-frame'>" + day++ + "</div>";
                         startDay++;
                     }
                 } else if (day <= daysInMonths[month]) {
-                    calendar[i][j] = "<div class='calendar-mobilelive__date--frame'>" + day++ + "</div>";
+                    calendar[i][j] = "<div class='ml-calendar__date-frame'>" + day++ + "</div>";
                 } else {
                     calendar[i][j] = "";
                     haveDays = false;
@@ -138,7 +138,7 @@ var CALENDAR = function () {
         calendar = "<table class='curr'>" + calendar.join("") + "</table>";
 
         if (month === new Date().getMonth()) {
-            var tdArr = calWrap.querySelector(".calendar-mobilelive__frame").querySelectorAll("td");
+            var tdArr = calWrap.querySelector(".ml-calendar__frame").querySelectorAll("td");
 
             for (var i = 0; i < tdArr.length; i++) {
 
@@ -165,9 +165,9 @@ var CALENDAR = function () {
 
 function clickDay(cal) {
     var wrap = cal, months,
-        tdArr = wrap.querySelector(".calendar-mobilelive__frame").querySelectorAll(".calendar-mobilelive__date--frame"),
+        tdArr = wrap.querySelector(".ml-calendar__frame").querySelectorAll(".ml-calendar__date-frame"),
 
-        label = wrap.querySelector(".month-year-label"),
+        label = wrap.querySelector(".-label"),
         curr = label.innerHTML.trim().split(" "),
         calMonth = curr[0];
 

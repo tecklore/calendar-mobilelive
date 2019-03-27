@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e94f5647-8dc4-48e1-93f6-648a85a076ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/calendarCustom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/calendarCustom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/calendarCustom.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/calendarCustom.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/calendarCustom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/calendarCustom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/calendarCustom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/calendarCustom.js" afterDir="false" />
     </list>
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/calendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="32" column="56" lean-forward="true" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+            <state relative-caret-position="17">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/calendarCustom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="651">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/calendarCustom.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="186">
+              <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -69,9 +69,12 @@
       <find>daysJS</find>
       <find>__date--frame</find>
       <find>prevJS</find>
-      <find>days</find>
       <find>nextJS</find>
       <find>left</find>
+      <find>js-next</find>
+      <find>days</find>
+      <find>ml-calendar__date--frame</find>
+      <find>calendar-mobilelive</find>
     </findStrings>
     <replaceStrings>
       <replace>$color-primary</replace>
@@ -104,7 +107,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,6 +134,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,12 +172,13 @@
       <workItem from="1553002674559" duration="1208000" />
       <workItem from="1553633416738" duration="481000" />
       <workItem from="1553635915315" duration="198000" />
-      <workItem from="1553639077476" duration="1737000" />
+      <workItem from="1553639077476" duration="2987000" />
+      <workItem from="1553694430415" duration="3886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13432000" />
+    <option name="totallyTimeSpent" value="18568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="603" y="51" width="1316" height="993" extended-state="0" />
@@ -239,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/calendarCustom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="651">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -249,15 +253,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/calendarCustom.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="186">
+          <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="32" column="56" lean-forward="true" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
